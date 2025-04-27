@@ -15,7 +15,7 @@ body {
   max-width: 90%;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background: #e6e6e6;
+  background: #ffffff;
   border-radius: 8px;
   padding: 1vh;
 }
@@ -45,7 +45,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(221, 221, 221, 0.5);
+  background: rgba(255, 255, 255, 0.5);
   color: rgb(0, 0, 0);
   border: none;
   padding: 15px;
@@ -58,7 +58,7 @@ body {
 }
 
 .nav-btn:hover {
-  background: rgba(160, 160, 160, 0.8);
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .nav-btn #botonAtras {
@@ -77,17 +77,18 @@ body {
 }
 
 .punto {
+  margin-top: 1px;
   width: 25px;
   height: 6px;
   border-radius: 20%;
   transition: 0.3s;
-  background-color: #afafaf;
+  background-color: #363636;
 }
 
 .puntoActivo {
   width: 25px;
   height: 7px;
   border-radius: 10%;
-  background-color: #ffffff;
+  background-color: #b4b4b4;
   box-shadow: 0 4px 8px rgba(51, 51, 51, 0.2);
 }
