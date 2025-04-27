@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+
+
+.carrusel {
+  position: relative;
+  width: 70%;
+  max-width: 90%;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: #e6e6e6;
+  border-radius: 8px;
+  padding: 1vh;
+}
+
+
+.contenedor-imagenes {
+  position: relative;
+  padding: 2vh 0 0 0;
+  height: 60vh;
+}
+
+
+.carrusel img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+.imgActiva {
+  opacity: 1;
+  z-index: 1;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(221, 221, 221, 0.5);
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 2;
+  font-size: 2rem;
+  border-radius: 20%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn:hover {
+  background: rgba(160, 160, 160, 0.8);
+}
+
+.nav-btn #botonAtras {
+  left: 3%;
+}
+
+#botonAdelante {
+  right: 3%;
+}
+
+.puntos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.punto {
+  width: 25px;
+  height: 6px;
+  border-radius: 20%;
+  transition: 0.3s;
+  background-color: #afafaf;
+}
+
+.puntoActivo {
+  width: 25px;
+  height: 7px;
+  border-radius: 10%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(51, 51, 51, 0.2);
+}
