@@ -92,3 +92,13 @@ body {
   background-color: #b4b4b4;
   box-shadow: 0 4px 8px rgba(51, 51, 51, 0.2);
 }
+
+/*Transiciones de la Barra de Navegacion*/
+.navbar-collapse.collapse {
+  transition: height 0.35s ease;
+}
+.navbar-collapse.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
