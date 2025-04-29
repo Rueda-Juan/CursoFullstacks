@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link id="estilo-nav-bar" rel="stylesheet" href="nav-bar.css">
 </head>
 
 <body>
@@ -41,66 +42,77 @@
 
         <!-- Perfiles -->
         <div class="container-fluid d-flex justify-content-center">
-            <div class="row mt-5 pt-5 d-flex justify-content-center">
-                <div class="col-sm-5 d-flex justify-content-center">
+            <div class="row mt-5 pt-5 d-flex justify-content-center ">
+                <div class="col-sm-5 d-flex justify-content-center container">
                     <div class="card d-flex bg-light" style="width: 20rem;">
-                        <img src="img/juan.jpg" class="card-img-top" alt="Imagen de perfil">
+                        <div>
+                            <img src="img/juan.jpg" class="card-img-top" alt="Imagen de perfil">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Rueda Juan Bautista</h5>
-                            <p class="card-text">Estudiante de 2do año en la carrera de Licenciatura en Sistemas en la facultad de informatica de la UNLP</p>
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#perfilJuan">Más</button>
+                            <p class="card-text">Estudiante de 2do año en la carrera de Licenciatura en Sistemas en la
+                                facultad de informatica de la UNLP</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#perfilJuan">Más</button>
                         </div>
-                </div>
-            </div>
-            <div class="col-sm-5 d-flex justify-content-center">
-                <div class="card bg-light" style="width: 20rem;">
-                    <img src="img/javi.jpg" class="card-img-top" alt="Imagen de perfil">
-                    <div class="card-body">
-                        <h5 class="card-title">Rodriguez Javier Agustin</h5>
-                        <p class="card-text">Estudiante de 2do año en la carrera de Licenciatura en informatica en la facultad de informatica de la UNLP.</p>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#perfilJavi">Más</button>
                     </div>
                 </div>
-            </div>
-        </div>
 
-
-        <!-- Ventana de mas informacion de "Juan Rueda" -->
-        <div class="modal fade" id="perfilJuan" tabindex="-1" aria-labelledby="modalInfoLabel">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5">Perfil de Rueda Juan Bautista</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p> Hola mundo1</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <div class="col-sm-5 d-flex justify-content-center container">
+                    <div class="card bg-light" style="width: 20rem;">
+                        <div>
+                            <img src="img/javi.jpg" class="card-img-top" alt="Imagen de perfil">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Rodriguez Javier Agustin</h5>
+                            <p class="card-text">Estudiante de 2do año en la carrera de Licenciatura en informatica en
+                                la facultad de informatica de la UNLP.</p>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#perfilJavi">Más</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
-        <!-- Ventana de mas informacion de "Javier Rodriguez" -->
-        <div class="modal fade" id="perfilJavi" tabindex="-1" aria-labelledby="modalInfoLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5">Perfil Rodriguez Javier Agustin</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p> Hola mundo2</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <!-- Ventana de mas informacion de "Juan Rueda" -->
+            <div class="modal fade" id="perfilJuan" tabindex="-1" aria-labelledby="modalInfoLabel">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5">Perfil de Rueda Juan Bautista</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>dato curioso: <br>las imagenes del carrusel es el tp de un amigo que estudia diseño
+                                grafico
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+
+            <!-- Ventana de mas informacion de "Javier Rodriguez" -->
+            <div class="modal fade" id="perfilJavi" tabindex="-1" aria-labelledby="modalInfoLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5">Perfil Rodriguez Javier Agustin</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p> Hola mundo2</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </main>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

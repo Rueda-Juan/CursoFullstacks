@@ -8,3 +8,26 @@
     overflow: hidden;
     transition: height 0.35s ease;
 }
+
+.container {
+    padding: 2vh 0 2vh 0;
+    margin: 1vh;
+}
+
+.card {
+    padding: 1vh;
+}
+
+.boton {
+    background: rgba(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.boton:hover {
+    background: rgba(231, 231, 231);
+}
+
+.card img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(51, 51, 51, 0.2);
+}
