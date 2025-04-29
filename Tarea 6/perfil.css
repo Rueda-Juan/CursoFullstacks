@@ -1,4 +1,3 @@
-
 /*Transiciones de la Barra de Navegacion*/
 .navbar-collapse.collapse {
     transition: height 0.35s ease;
