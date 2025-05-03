@@ -1,0 +1,14 @@
+.navbar-collapse.collapse {
+    transition: height 0.35s ease;
+}
+
+.navbar-collapse.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease;
+}
+@media (max-width: 780.98px) {
+    .miTienda{
+        padding-top: 3rem !important;
+    }
+  }
