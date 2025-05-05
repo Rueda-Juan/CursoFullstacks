@@ -1,0 +1,9 @@
+.flip-horizontal {
+    transform: scaleX(-1);
+    display: inline-block;
+}
+
+.flip-vertical {
+    transform: scaleY(-1);
+    display: inline-block;
+}
