@@ -25,3 +25,49 @@ function validarForm(event) {
   }
 
 }
+//---Productos-----------------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', function () {
+
+  const comprarBtn = document.getElementById('comprarBtn');
+  const calificacion = document.getElementById('calificacion');
+
+  comprarBtn.addEventListener('click', function () {
+    alert('Gracias Por Su Compra!');
+    if (calificacion.style.display === 'none' || calificacion.style.display === '') {
+      calificacion.style.display = 'block';
+    } else {
+      calificacion.style.display = 'none';
+    }
+  });
+
+  const stars = document.querySelectorAll('.estrellas i');
+  stars.forEach(star => {
+    star.addEventListener('click', function () {
+      const rating = parseInt(this.getAttribute('data-rating'));
+
+      stars.forEach(s => {
+        s.classList.remove('bi-star-fill');
+        s.classList.add('bi-star');
+      });
+
+      for (let i = 0; i < rating; i++) {
+        stars[i].classList.remove('bi-star');
+        stars[i].classList.add('bi-star-fill');
+      }
+    });
+  });
+
+  const enviarReview = document.getElementById('enviarReview');
+  enviarReview.addEventListener('click', function () {
+    const filledStars = document.querySelectorAll('.estrellas .bi-star-fill').length;
+
+    if (filledStars === 0) {
+      alert('Por favor selecciona una calificación con las estrellas');
+      return;
+    }
+
+    // Aquí podrías enviar los datos a un servidor
+    alert(`Gracias por tu calificación de ${filledStars} estrellas y tu comentario!`);
+    calificacion.style.display = 'none';
+  });
+});
