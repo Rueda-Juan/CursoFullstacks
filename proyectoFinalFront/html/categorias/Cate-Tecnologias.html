@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/styleCate.css">
+    <link rel="stylesheet" href="../../css/nav-bar.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <title>Tecnologías</title>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+
+        <div class="d-flex align-items-center order-0">
+
+          <button class="navbar-toggler order-0 me-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+          <a class="navbar-brand me-3" href="../inicio/Inicio.html">
+            <img src="" alt="Logo" width="40" height="40">
+          </a>
+        </div>
+
+
+        <form class="d-flex flex-grow-1 justify-content-center order-1 mx-3" role="search" id="buscadorProducto">
+          <input list="listaProductos" class="form-control me-2 w-100 w-sm-75 w-md-50" id="inputProducto" type="search" placeholder="Buscar productos..." aria-label="Buscar">
+          <button class="btn btn-outline-success w-auto w-md-25" type="submit">Buscar</button>
+
+          <datalist id="listaProductos">
+            <option value="celular">
+            <option value="heladera">
+            <option value="horno">
+            <option value="lavarropa">
+            <option value="notebook">
+            <option value="tablet">
+          </datalist>
+        </form>
+
+
+        <div class="collapse navbar-collapse order-2 justify-content-end" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="../inicio/Inicio.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="../categorias/Cate-Todo.html">Productos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categoría
+              </a>
+              <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item fw-bold" href="../categorias/Categorias.html">Ver Todo</a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="../categorias/Cate-Electrodomesticos.html">Electrodomésticos</a></li>
+                <li><a class="dropdown-item" href="#">Tecnologías</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="../contacto/Contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+    
+    <section>
+      <br><br><br><br>
+      <h1 class="d-flex justify-content-center">Tecnologías</h1>
+  
+      <section class="d-flex justify-content-center gap-4 my-4">
+  
+        <div class="card" style="width: 19rem;">
+          <a href="../productos/TecnologiaNotebook.html">
+            <img src="../../img/Tecnologia-Notebook.webp" class="card-img-top" alt="Notebook"/>
+          </a>
+          <div class="card-body">
+            <h3 class="card-text text-center">Notebook</h3>
+            <h4 class="card-text text-center">$</h4>
+          </div>
+        </div>
+      
+        <div class="card" style="width: 19rem;">
+          <a href="../productos/TecnologiaCelular.html">
+            <img src="../../img/Tecnologia-Celular.webp" class="card-img-top" alt="Celular"/>
+          </a>
+          <div class="card-body">
+            <h3 class="card-text text-center">Celular</h3>
+            <h4 class="card-text text-center">$</h4>
+          </div>
+        </div>
+  
+        <div class="card" style="width: 19rem;">
+          <a href="../productos/TecnologiaTablet.html">
+            <img src="../../img/Tecnologia-Tablet.webp" class="card-img-top" alt="Tablet"/>
+          </a>
+          <div class="card-body">
+            <h3 class="card-text text-center">Tablet</h3>
+            <h4 class="card-text text-center">$</h4>
+          </div>
+        </div>
+    
+      </section>
+      <br><br><br>
+
+    </section>
+
+    <footer>
+
+    </footer>
+    <script src="../../js/script.js"></script>
+</body>
+</html>

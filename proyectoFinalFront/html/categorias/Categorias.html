@@ -25,16 +25,16 @@
             </button>
   
   
-            <a class="navbar-brand me-3" href="#">
+            <a class="navbar-brand me-3" href="../inicio/Inicio.html">
               <img src="" alt="Logo" width="40" height="40">
             </a>
           </div>
   
   
           <form class="d-flex flex-grow-1 justify-content-center order-1 mx-3" role="search" id="buscadorProducto">
-            <input list="listaProductos" class="form-control me-2 w-100 w-sm-75 w-md-50" id="inputProducto" type="search" placeholder="Buscar productos..."
-              aria-label="Buscar">
+            <input list="listaProductos" class="form-control me-2 w-100 w-sm-75 w-md-50" id="inputProducto" type="search" placeholder="Buscar productos..." aria-label="Buscar">
             <button class="btn btn-outline-success w-auto w-md-25" type="submit">Buscar</button>
+  
             <datalist id="listaProductos">
               <option value="celular">
               <option value="heladera">
@@ -52,13 +52,23 @@
                 <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="../inicio/Inicio.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="#">Productos</a>
+                <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="../categorias/Cate-Todo.html">Productos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categoría
+                </a>
+                <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item fw-bold" href="#">Ver Todo</a>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="../categorias/Cate-Electrodomesticos.html">Electrodomésticos</a></li>
+                  <li><a class="dropdown-item" href="../categorias/Cate-Tecnologias.html">Tecnologías</a></li>
+                </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="#">Categoría</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="../contacto/Contacto.html">Contacto</a>
+                <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="#">Contacto</a>
               </li>
             </ul>
           </div>
@@ -74,7 +84,7 @@
       <section class="d-flex justify-content-center gap-4 my-4">
         
         <div class="card" style="width: 19rem;">
-          <a href="">
+          <a href="../categorias/Cate-Electrodomesticos.html">
             <img src="../../img/electrodomesticos.jpg" class="card-img-top" alt="Electrodoméstico" />
           </a>
           <div class="card-body">
@@ -83,7 +93,7 @@
         </div>
         
         <div class="card" style="width: 19rem;">
-          <a href="">
+          <a href="../categorias/Cate-Tecnologias.html">
             <img src="../../img/tecnologías.jpg" class="card-img-top" alt="Tecnología" />
           </a>
           <div class="card-body">
@@ -92,7 +102,7 @@
         </div>
 
         <div class="card" style="width: 19rem;">
-          <a href="">
+          <a href="../categorias/Cate-Todo.html">
             <img src="../../img/todo.webp" class="card-img-top" alt="Todo" />
           </a>
           <div class="card-body">
