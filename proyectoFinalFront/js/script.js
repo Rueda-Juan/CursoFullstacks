@@ -26,7 +26,7 @@ function validarForm(event) {
 
 }
 
-
+//---Buscador-----------------------------------------------------------------------
 //Script de buscador de productos
 function normalizar(text) {
   return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
