@@ -33,23 +33,32 @@
         </div>
 
 
-        <form class="d-flex flex-grow-1 justify-content-center order-1 mx-3" role="search">
-          <input class="form-control me-2 w-100 w-sm-75 w-md-50" type="search" placeholder="Buscar productos..."
-            aria-label="Buscar">
+        <form class="d-flex flex-grow-1 justify-content-center order-1 mx-3" role="search" id="buscadorProducto">
+          <input list="listaProductos" class="form-control me-2 w-100 w-sm-75 w-md-50" id="inputProducto" type="search"
+            placeholder="Buscar productos..." aria-label="Buscar">
           <button class="btn btn-outline-success w-auto w-md-25" type="submit">Buscar</button>
+          <datalist id="listaProductos">
+            <option value="celular">
+            <option value="heladera">
+            <option value="horno">
+            <option value="lavarropa">
+            <option value="notebook">
+            <option value="tablet">
+          </datalist>
         </form>
 
 
         <div class="collapse navbar-collapse order-2 justify-content-end" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="#">Inicio</a>
+              <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="../inicio/Inicio.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="#">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="#">Categoría</a>
+              <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2"
+                href="../categorias/Categorias.html">Categoría</a>
             </li>
             <li class="nav-item">
               <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="../contacto/Contacto.html">Contacto</a>
@@ -181,10 +190,11 @@
         <div class="col-md-4 col-lg-3 col-xl-2 mx-auto mb-4">
           <h6 class="text-uppercase fw-bold mb-3">Enlaces</h6>
           <ul class="list-unstyled">
-            <li><a href="#" class="text-light text-decoration-none d-block mb-2">Inicio</a></li>
+            <li><a href="../inicio/Inicio.html" class="text-light text-decoration-none d-block mb-2">Inicio</a></li>
             <li><a href="#" class="text-light text-decoration-none d-block mb-2">Productos</a></li>
-            <li><a href="#" class="text-light text-decoration-none d-block mb-2">Categoría</a></li>
-            <li><a href="Contacto.html" class="text-light text-decoration-none d-block">Contacto</a></li>
+            <li><a href="../categorias/Categorias.html"
+                class="text-light text-decoration-none d-block mb-2">Categoría</a></li>
+            <li><a href="../contacto/Contacto.html" class="text-light text-decoration-none d-block">Contacto</a></li>
           </ul>
         </div>
 
