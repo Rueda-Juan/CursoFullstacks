@@ -31,10 +31,18 @@
         </div>
 
 
-        <form class="d-flex flex-grow-1 justify-content-center order-1 mx-3" role="search">
-          <input class="form-control me-2 w-100 w-sm-75 w-md-50" type="search" placeholder="Buscar productos..."
-            aria-label="Buscar">
+        <form class="d-flex flex-grow-1 justify-content-center order-1 mx-3" role="search" id="buscadorProducto">
+          <input list="listaProductos" class="form-control me-2 w-100 w-sm-75 w-md-50" id="inputProducto" type="search" placeholder="Buscar productos..." aria-label="Buscar">
           <button class="btn btn-outline-success w-auto w-md-25" type="submit">Buscar</button>
+
+          <datalist id="listaProductos">
+            <option value="celular">
+            <option value="heladera">
+            <option value="horno">
+            <option value="lavarropa">
+            <option value="notebook">
+            <option value="tablet">
+          </datalist>
         </form>
 
 
