@@ -7,3 +7,25 @@
     transform: scaleY(-1);
     display: inline-block;
 }
+
+.calificacion {
+    display: none;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+.estrellas {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.estrellas .bi-star-fill {
+    color: #ffc107;
+}
+
+.estrellas .bi-star {
+    color: #ccc;
+}
