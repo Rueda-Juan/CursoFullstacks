@@ -29,3 +29,7 @@
 .estrellas .bi-star {
     color: #ccc;
 }
+
+body {
+    padding-top: 7vh;
+}
