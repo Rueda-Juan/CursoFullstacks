@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/styleCate.css">
+  <link rel="stylesheet" href="../../css/nav-bar.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <title>Todos Nuestros Productos</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container-fluid d-flex align-items-center justify-content-between">
+
+        <div class="d-flex align-items-center order-0">
+
+          <button class="navbar-toggler order-0 me-2" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar" aria-controls="collapsibleNavbar" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+
+          <a class="navbar-brand me-3" href="../inicio/Inicio.html">
+            <img src="../../img/Logo.jpeg" alt="Logo" width="80" height="80">
+          </a>
+        </div>
+
+
+        <form class="d-flex flex-grow-1 justify-content-center order-1 mx-3" role="search" id="buscadorProducto">
+          <input list="listaProductos" class="form-control me-2 w-100 w-sm-75 w-md-50" id="inputProducto" type="search"
+            placeholder="Buscar productos..." aria-label="Buscar">
+          <button class="btn btn-outline-success w-auto w-md-25" type="submit">Buscar</button>
+
+          <datalist id="listaProductos">
+            <option value="celular">
+            <option value="heladera">
+            <option value="horno">
+            <option value="lavarropa">
+            <option value="notebook">
+            <option value="tablet">
+          </datalist>
+        </form>
+
+
+        <div class="collapse navbar-collapse order-2 justify-content-end" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="../inicio/Inicio.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2"
+                href="../categorias/Cate-Todo.html">Productos</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="#" id="navbarDropdown"
+                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categoría
+              </a>
+              <ul class="dropdown-menu bg-light" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item fw-bold" href="../categorias/Categorias.html">Ver Categorias</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="../categorias/Cate-Electrodomesticos.html">Electrodomésticos</a></li>
+                <li><a class="dropdown-item" href="../categorias/Cate-Tecnologias.html">Tecnologías</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 fs-md-4 fs-lg-3 me-3 mb-2 px-3 py-2" href="../contacto/Contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section class="py-5">
+    <div class="container">
+      <h1 class="text-center mb-1 mt-5 pt-5">Todos Nuestros Productos</h1>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <!-- Producto 1 - Heladera -->
+        <div class="col">
+          <div class="card h-100 product-card shadow-sm">
+            <div class="position-relative">
+              <a href="../productos/TecnologiaHeladera.html">
+                <img src="../../img/Electrodomestico-Heladera.webp" class="card-img-top img-fluid product-image"
+                  alt="Heladera">
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <span class="badge bg-success mb-2">ENVÍO GRATIS</span>
+              <h5 class="card-title">Heladera Midea 470L</h5>
+              <div class="mb-2">
+                <span class="fw-bold">$1.426.376</span>
+              </div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted ms-1">(3)</span>
+              </div>
+              <a href="../productos/TecnologiaHeladera.html" class="btn btn-outline-primary w-100">Ver detalles</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 2 - Lavarropas -->
+        <div class="col">
+          <div class="card h-100 product-card shadow-sm">
+            <div class="position-relative">
+              <span class="badge bg-success position-absolute top-0 start-0 m-2">10% OFF</span>
+              <a href="../productos/TecnologiaLavarropas.html">
+                <img src="../../img/Electrodomestico-Lavarropas.webp" class="card-img-top img-fluid product-image"
+                  alt="Lavarropas">
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <span class="badge bg-success mb-2">ENVÍO GRATIS</span>
+              <h5 class="card-title">Lavarropas Samsung WW70AA46BW</h5>
+              <div class="mb-2">
+                <span class="text-decoration-line-through text-muted me-2">$802.999</span>
+                <span class="fw-bold">$722.699</span>
+              </div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted ms-1">(42)</span>
+              </div>
+              <a href="../productos/TecnologiaLavarropas.html" class="btn btn-outline-primary w-100">Ver detalles</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 3 - Horno -->
+        <div class="col">
+          <div class="card h-100 product-card shadow-sm">
+            <div class="position-relative">
+              <a href="../productos/TecnologiaHorno.html">
+                <img src="../../img/Electrodomestico-Horno.webp" class="card-img-top img-fluid product-image"
+                  alt="Horno">
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <span class="badge bg-success mb-2">ENVÍO GRATIS</span>
+              <h5 class="card-title">Horno Peabody PCE-53 eléctrica</h5>
+              <div class="mb-2">
+                <span class="fw-bold">$852.999</span>
+              </div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted ms-1">(15)</span>
+              </div>
+              <a href="../productos/TecnologiaHorno.html" class="btn btn-outline-primary w-100">Ver detalles</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 4 - Celular -->
+        <div class="col">
+          <div class="card h-100 product-card shadow-sm">
+            <div class="position-relative">
+              <span class="badge bg-success position-absolute top-0 start-0 m-2">10% OFF</span>
+              <a href="../productos/TecnologiaCelular.html">
+                <img src="../../img/Tecnologia-Celular.webp" class="card-img-top img-fluid product-image" alt="Celular">
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <span class="badge bg-success mb-2">ENVÍO GRATIS</span>
+              <h5 class="card-title">Celular Motorola G32</h5>
+              <div class="mb-2">
+                <span class="text-decoration-line-through text-muted me-2">$263.999</span>
+                <span class="fw-bold">$237.599</span>
+              </div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <span class="text-muted ms-1">(28)</span>
+              </div>
+              <a href="../productos/TecnologiaCelular.html" class="btn btn-outline-primary w-100">Ver detalles</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 5 - Tablet -->
+        <div class="col">
+          <div class="card h-100 product-card shadow-sm">
+            <div class="position-relative">
+              <a href="../productos/TecnologiaTablet.html">
+                <img src="../../img/Tecnologia-Tablet.webp" class="card-img-top img-fluid product-image" alt="Tablet">
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <span class="badge bg-success mb-2">ENVÍO GRATIS</span>
+              <h5 class="card-title">Tablet Samsung Galaxy Tab 9+</h5>
+              <div class="mb-2">
+                <span class="fw-bold">$224.999</span>
+              </div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <span class="text-muted ms-1">(37)</span>
+              </div>
+              <a href="../productos/TecnologiaTablet.html" class="btn btn-outline-primary w-100">Ver detalles</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 6 - Notebook -->
+        <div class="col">
+          <div class="card h-100 product-card shadow-sm">
+            <div class="position-relative">
+              <a href="../productos/TecnologiaNotebook.html">
+                <img src="../../img/Tecnologia-Notebook.webp" class="card-img-top img-fluid product-image"
+                  alt="Notebook">
+              </a>
+            </div>
+            <div class="card-body text-center">
+              <span class="badge bg-success mb-2">ENVÍO GRATIS</span>
+              <h5 class="card-title">Notebook Asus E410</h5>
+              <div class="mb-2">
+                <span class="fw-bold">$326.536</span>
+              </div>
+              <div class="text-warning mb-2">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-half"></i>
+                <i class="bi bi-star"></i>
+                <span class="text-muted ms-1">(19)</span>
+              </div>
+              <a href="../productos/TecnologiaNotebook.html" class="btn btn-outline-primary w-100">Ver detalles</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <footer class="bg-dark text-light pt-5 pb-4 mt-auto footer">
+    <div class="container text-center text-md-start">
+      <div class="row mt-lg-5 pt-lg-5">
+
+        <div class="col-md-4 col-lg-4 col-xl-3 mx-auto mb-4 miTienda">
+          <h5 class="text-uppercase fw-bold mb-3">Alta Compra</h5>
+          <p>Productos de calidad y atención personalizada para todos nuestros clientes.</p>
+        </div>
+
+
+        <div class="col-md-4 col-lg-3 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-3">Enlaces</h6>
+          <ul class="list-unstyled">
+            <li><a href="../inicio/Inicio.html" class="text-light text-decoration-none d-block mb-2">Inicio</a></li>
+            <li><a href="../categorias/Cate-Todo.html"
+                class="text-light text-decoration-none d-block mb-2">Productos</a></li>
+            <li><a href="../categorias/Categorias.html"
+                class="text-light text-decoration-none d-block mb-2">Categoría</a></li>
+            <li><a href="../contacto/Contacto.html" class="text-light text-decoration-none d-block">Contacto</a></li>
+          </ul>
+        </div>
+
+
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+          <h6 class="text-uppercase fw-bold mb-3">Síguenos</h6>
+          <a href="#" class="me-3 text-light"><i class="bi bi-facebook fs-4"></i></a>
+          <a href="#" class="me-3 text-light"><i class="bi bi-instagram fs-4"></i></a>
+          <a href="#" class="me-3 text-light"><i class="bi bi-twitter fs-4"></i></a>
+          <a href="#" class="me-3 text-light"><i class="bi bi-youtube fs-4"></i></a>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <p class="mb-0">&copy; 2025 Alta Compra. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script src="../../js/script.js"></script>
+
+</html>

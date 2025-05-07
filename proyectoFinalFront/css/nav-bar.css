@@ -7,6 +7,12 @@
     overflow: hidden;
     transition: height 0.35s ease;
 }
+@media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    }
+}
 @media (max-width: 780.98px) {
     .miTienda{
         padding-top: 3rem !important;
