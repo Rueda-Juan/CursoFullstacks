@@ -109,7 +109,8 @@ El sitio está dirigido a:
   - La barra de navegación es un componente clave del sitio web Alta Compra, diseñada para ofrecer una experiencia de usuario fluida, moderna y totalmente responsiva utilizando Bootstrap 5.
 - Ubicacion
   - Fijada en la parte superior de la pantalla (fixed-top) para mantenerla siempre visible mientras el usuario navega.
--Componentes de la Barra de navegacion
+- Componentes de la Barra de navegacion
+
 | Componente                | Descripción                                                                                             |
 | ------------------------- | ------------------------------------------------------------------------------------------------------- |
 | `navbar-toggler`          | Botón visible en dispositivos móviles que despliega/colapsa el menú de navegación.                      |
