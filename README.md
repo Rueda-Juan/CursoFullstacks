@@ -71,6 +71,7 @@ El sitio está dirigido a:
 - /html/produtos/ -> Pagina de productos
 - /html/inicio/inicio.html → Página principal
 
+---
 
 ## Reparticion de Responsabilidades
 
@@ -87,13 +88,77 @@ El sitio está dirigido a:
 </p>
 
 #### Pagina Consulta
-- <p> 
-  trabaje desde la rama Juanchi-producto, esta rama sale desde la rama develop(de esta rama deberían salir las ramas donde trabajan mis compañeros de grupo), la cual sale de la rama master(default), este método me pareció el más ordenado y profesional para el desarrollo de la página.
-</p>
+- en el header vi que había un botón de consulta, entonces agarre la página de consulta hecha previamente en el ejercicio de duplas, y lo modifique un poco para que tenga más bootstrap, le agregue las validaciones mediante HTML y JavaScript
+- Para las validaciones lo que hice fue que en el campo nombre, no se permitieran números ni caracteres especiales(/^[A-Za-zÁÉÍÓÚáéíóú\s]+$/), en el campo email se permiten guiones, guiones bajos, puntos y números, pero debe incluir un “@”, y un “.”(de la extensión), debe tener por lo menos 1 carácter por delante y por detrás del “@”, la extensión del email debe tener entre 2 y 6 caracteres (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/), para el campo de texto lo único que puse es que fuera requerido.
+
+---
 
 ### Atilio Joaquin Rossi
+
 #### Seccion Categorias
 - <p>
   La parte del proyecto en donde trabaje fue en las categorías, primero empecé con la creación de una carpeta llamada Categorías, en ella cree cuatro HTML, uno con el nombre Categorias y los otros tres de los diferentes productos que se encuentran en la tienda online. Luego hice un CSS denominado styleCate y una carpeta de imágenes, donde agregué una imagen que muestra los diferentes productos que ofrecemos, como también de las diferentes categorías que serían, de electrodomésticos, tecnologías y la última con lo mismo, pero juntas. 
 - Las tres imágenes que muestra el HTML principal (Categorias) tienen la funcionalidad de clickear sobre ellas para dirigirte a cada una de las categorías. Donde allí se encuentran los diferentes productos, con su nombre y precio. Estas imágenes de los productos también tienen la funcionalidad de clickear sobre ellas para dirigirte a cada producto y obtener más información sobre ellos. Esas imágenes en los diferentes HTML se encuentran divididas en tres card que ofrece Boostrap, las mismas se localizan en tres div que son englobadas por un section. En el CSS llamado styleCate se encuentran unas modificación que hice en las card y un @media (media queries) para hacer que el section (donde se encuentran las card), se coloquen de manera de columnas en el momento de achicar la página a 783 px y obtener una mayor funcionalidad. No tuve tantos inconvenientes con la parte del proyecto que me toco, solamente cuando quería hacer la página responsible pero al final lo pude solucionar.
 </p>
+
+---
+
+### Rodriguez Javier Agustin
+#### Barra de Navegacion
+- Descripcion
+  - La barra de navegación es un componente clave del sitio web Alta Compra, diseñada para ofrecer una experiencia de usuario fluida, moderna y totalmente responsiva utilizando Bootstrap 5.
+- Ubicacion
+  - Fijada en la parte superior de la pantalla (fixed-top) para mantenerla siempre visible mientras el usuario navega.
+-Componentes de la Barra de navegacion
+| Componente                | Descripción                                                                                             |
+| ------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `navbar-toggler`          | Botón visible en dispositivos móviles que despliega/colapsa el menú de navegación.                      |
+| **Logo**                  | Imagen identificadora de la marca, alineada a la izquierda.                                             |
+| **Barra de Búsqueda**     | Centrada, adaptativa (se expande en pantallas pequeñas y se reduce en pantallas grandes).               |
+| **Enlaces de Navegación** | Alineados a la derecha en pantallas grandes. En móviles, se muestran verticalmente uno debajo del otro. |
+
+- Enlaces
+  - Inicio: redirige a la pagina de inicio
+  - Productos: redirige a la pagina de todos los productos
+  - Categoria
+    - Ver Categorias: Redirige a la pagina de todas las categorias
+    - Electrodomestico: Redirige a la pagina de los productos electrodomesticos
+    - Tecnologia: Redirige a la pagina de los productos tecnologia
+- Estilos Personalizados
+  - Utiliza un archivo CSS dedicado: nav-bar.css.
+  - Clase .custom-navbar:
+    - Añade una sombra suave para elevar visualmente la barra.
+    - Mejora la estética sin interferir con la funcionalidad Bootstrap.
+  - Incluye una transición leve para cambios de estado o desplazamientos.
+
+- Modulo de Busqueda de Productos
+  - El buscador permite al usuario encontrar rápidamente productos de tecnología o electrodomésticos y ser redirigido automáticamente a su página correspondiente.
+
+- Funcionamiento General del Modulo de Busqueda de Productos
+  1) Captura el evento submit del formulario para evitar la recarga de página por defecto.
+  2) Normaliza el texto ingresado:
+    - Convierte a minúsculas.
+    - Elimina tildes (acentos).
+  3) Compara el texto ingresado con una lista (objeto tipo diccionario) que contiene productos disponibles y sus rutas HTML.
+  4) Flujo de búsqueda:
+    - ✅ Coincidencia exacta: Redirecciona al archivo correspondiente.
+    - 🔄 Coincidencia parcial: Redirecciona al primer resultado coincidente.
+    - ❌ Sin coincidencias: Muestra una alerta: "Producto no encontrado".
+- Para hacer la barra de navegacion me base en la barra de navegacion que utiliza la pagina web "Fravega"
+
+#### Footer
+- el footer forma parte del sitio web “Alta Tienda”, se diseño para que sea completamente responsive usando bootstrap 5,
+- Ubicacion: parte inferior fija en la pagina, siempre visible.
+- Secciones
+    - Informacion de la tienda
+    - Enlaces de navegacion utiles
+    - iconos de redes sociales
+- Estilo: tiene un estilo oscuro(bg-dark), texto claro(text-light), posee un archivo de estilo llamado “nav-bar.css”, el cual en pantallas menores a 780px se le da un “padding-top: 3rem” a la clase “.miTienda”
+
+---
+
+### Gianfranco Mamone
+#### Pagina de Inicio
+- La parte del proyecto en la que trabajé fue en la página de inicio, específicamente en el archivo index.html y en su correspondiente hoja de estilos style.css. Empecé creando la estructura base del HTML, integrando Bootstrap para facilitar el diseño responsivo y lograr una estética moderna y funcional desde el comienzo.
+- Luego, agregué una sección de beneficios para el cliente (como envíos gratis, cuotas sin interés, y promociones) utilizando íconos de Bootstrap Icons y un layout responsivo basado en el sistema de grillas de Bootstrap.
+- Otra parte importante fue la sección de productos destacados. Utilicé tarjetas personalizadas para mostrar cada producto con su imagen, precio anterior y actual, cuotas disponibles y una pequeña calificación. Para esto, creé una clase .product-card en el CSS, donde trabajé con sombras, bordes redondeados y distribución del contenido para lograr un diseño limpio y atractivo. También agregué etiquetas como “ENVÍO GRATIS” y descuentos en forma de badge, todo con estilos definidos en style.css. Me basé en el estilo de páginas de tiendas online como Tienda Nube para lograr una estética moderna y funcional, asegurando que fuera intuitiva y visualmente agradable

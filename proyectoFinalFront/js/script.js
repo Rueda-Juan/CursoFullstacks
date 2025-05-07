@@ -37,7 +37,7 @@ document.getElementById('buscadorProducto').addEventListener('submit', function 
   //Diccionario de productos
   //Clave: nombre buscado , valor: archivo HTML
   const productos = {
-    "celular": "/CursoFullstacks/proyectoFinalFront/html/productos/TecnologiaCelular.html",
+    "celular": "/proyectoFinalFront/html/productos/TecnologiaCelular.html",
     "heladera": "/CursoFullstacks/proyectoFinalFront/html/productos/TecnologiaHeladera.html",
     "horno": "/CursoFullstacks/proyectoFinalFront/html/productos/TecnologiaHorno.html",
     "lavarropas": "/CursoFullstacks/proyectoFinalFront/html/productos/TecnologiaLavarropas.html",
