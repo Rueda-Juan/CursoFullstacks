@@ -1,7 +1,8 @@
 import sqlite3
 from CRUD_Usuario import (
     crear_usuario,
-    obtener_usuario
+    obtener_usuario,
+    obtener_usuario_por_correo
 )
 from CRUD_Tarea import (
     crear_tarea,
@@ -11,6 +12,7 @@ from CRUD_Tarea import (
     eliminar_tarea
 )
 from sqlite3 import IntegrityError
+from sqlite3 import Error
 
 def conectar_db():
     return sqlite3.connect("DbUsuario.db")
@@ -30,9 +32,12 @@ def login(conn):
         return None
 
 def verificar_credenciales(conn, correo, contraseña):
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM usuario WHERE correo = ? AND contraseña = ?", (correo, contraseña))
-    return cursor.fetchone()
+    usuario = obtener_usuario_por_correo(conn, correo)
+    if usuario is not None:
+        if usuario[3] == contraseña:  # usuario[3] = contraseña
+            return usuario
+    return None
+
 
 def registrar(conn):
     print("\n=== Registro de nuevo usuario ===")
@@ -57,7 +62,8 @@ def menu_tareas(conn, id_usuario):
         print("2. Crear tarea")
         print("3. Editar tarea")
         print("4. Eliminar tarea")
-        print("5. Cerrar sesión")
+        print("5. Marcar tarea como completada")
+        print("6. Cerrar sesión")
         opcion = input("Selecciona una opción: ")
 
         if opcion == "1":
@@ -76,28 +82,29 @@ def menu_tareas(conn, id_usuario):
             descripcion = input("Descripción (opcional): ").strip()
             crear_tarea(conn, id_usuario, titulo, descripcion)
             print(" Tarea creada.")
+
         elif opcion == "3":
             id_tarea = input("ID de la tarea a editar: ").strip()
             titulo = input("Nuevo título (enter para dejar igual): ").strip()
             descripcion = input("Nueva descripción (enter para dejar igual): ").strip()
-            completada = input("¿Completada? (s/n): ").strip().lower()
-            completada_valor = None
-            if completada == "s":
-                completada_valor = 1
-            elif completada == "n":
-                completada_valor = 0
             actualizado = actualizar_tarea(conn, int(id_tarea),
                                             titulo if titulo else None,
-                                            descripcion if descripcion else None,
-                                            completada_valor)
+                                            descripcion if descripcion else None)
             print(" Tarea actualizada." if actualizado else " No se pudo actualizar.")
+
         elif opcion == "4":
             id_tarea = input("ID de la tarea a eliminar: ").strip()
             confirmado = input("¿Estás seguro? (s/n): ").strip().lower()
             if confirmado == "s":
                 eliminado = eliminar_tarea(conn, int(id_tarea))
                 print(" Tarea eliminada." if eliminado else " No se encontró la tarea.")
+
         elif opcion == "5":
+            id_tarea = input("ID de la tarea a marcar como completada: ").strip()
+            completada = actualizar_tarea(conn, int(id_tarea), completada=1)
+            print(" Tarea marcada como completada." if completada else " No se pudo completar la tarea.")
+
+        elif opcion == "6":
             print("Cerrando sesión...")
             break
         else:

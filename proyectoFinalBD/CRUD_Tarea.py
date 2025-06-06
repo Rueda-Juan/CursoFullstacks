@@ -3,7 +3,7 @@ from sqlite3 import Error
 #TAREA
 # CREATE
 def crear_tarea(conn, id_usuario, titulo, descripcion=None):
-    sql = '''INSERT INTO tarea(id_usuario, titulo, descripcion)
+    sql = '''INSERT INTO Tarea(id_usuario, titulo, descripcion)
              VALUES(?,?,?)'''
     try:
         cursor = conn.cursor()
@@ -16,7 +16,7 @@ def crear_tarea(conn, id_usuario, titulo, descripcion=None):
 
 # READ
 def obtener_tarea(conn, id_tarea):
-    sql = "SELECT * FROM tarea WHERE id_tarea = ?"
+    sql = "SELECT * FROM Tarea WHERE id_tarea = ?"
     try:
         cursor = conn.cursor()
         cursor.execute(sql, (id_tarea,))
@@ -27,7 +27,7 @@ def obtener_tarea(conn, id_tarea):
 
 # READ ALL
 def obtener_tareas_por_usuario(conn, id_usuario):
-    sql = "SELECT * FROM tarea WHERE id_usuario = ?"
+    sql = "SELECT * FROM Tarea WHERE id_usuario = ?"
     try:
         cursor = conn.cursor()
         cursor.execute(sql, (id_usuario,))
@@ -55,7 +55,7 @@ def actualizar_tarea(conn, id_tarea, titulo=None, descripcion=None, completada=N
         return False
 
     params.append(id_tarea)
-    sql = f"UPDATE tarea SET {', '.join(updates)} WHERE id_tarea = ?"
+    sql = f"UPDATE Tarea SET {', '.join(updates)} WHERE id_tarea = ?"
 
     try:
         cursor = conn.cursor()
@@ -68,7 +68,7 @@ def actualizar_tarea(conn, id_tarea, titulo=None, descripcion=None, completada=N
 
 # DELETE
 def eliminar_tarea(conn, id_tarea):
-    sql = "DELETE FROM tarea WHERE id_tarea = ?"
+    sql = "DELETE FROM Tarea WHERE id_tarea = ?"
     try:
         cursor = conn.cursor()
         cursor.execute(sql, (id_tarea,))

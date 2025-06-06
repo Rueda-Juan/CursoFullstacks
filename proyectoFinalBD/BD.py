@@ -27,7 +27,7 @@ cursor.execute('''
         descripcion TEXT,
         fecha_creacion TEXT DEFAULT CURRENT_TIMESTAMP,
         completada INTEGER DEFAULT 0,
-        FOREIGN KEY(id_usuario) REFERENCES usuario(id_usuario) ON DELETE CASCADE)
+        FOREIGN KEY(id_usuario) REFERENCES Usuario(id_usuario) ON DELETE CASCADE)
 ''')
 
 conexion.commit()
