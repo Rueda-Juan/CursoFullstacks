@@ -1,10 +1,7 @@
 import sqlite3
-import BD
+from sqlite3 import Error
+
 #USUARIO
-conexion = sqlite3.connect("DbUsuario.db")
-
-cursor = conexion.cursor()
-
 #CREATE
 def crear_usuario(conn, correo, nombre, contraseña):
   sql = '''INSERT INTO Usuario(correo, nombre, contraseña)
