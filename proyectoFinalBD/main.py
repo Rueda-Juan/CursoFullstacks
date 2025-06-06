@@ -65,7 +65,7 @@ def menu_tareas(conn, id_usuario):
             if tareas:
                 print("\n Tus tareas:")
                 for t in tareas:
-                    estado = "" if t[5] else ""
+                    estado = "Completado" if t[5] else "Pendiente"
                     print(f"[{t[0]}] {t[2]} - {estado}")
                     if t[3]:
                         print(f"   {t[3]}")
