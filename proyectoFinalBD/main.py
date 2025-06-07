@@ -1,58 +1,26 @@
 import sqlite3
-from proyectoFinalBD.CRUD_Usuario import (
+from .CRUD_Usuario import (
     crear_usuario,
     obtener_usuario,
     obtener_usuario_por_correo
 )
-from proyectoFinalBD.CRUD_Tarea import (
+from .CRUD_Tarea import (
     crear_tarea,
     obtener_tarea,
     obtener_tareas_por_usuario,
     actualizar_tarea,
     eliminar_tarea
 )
+from .Servicios import (
+    login,
+    verificar_credenciales,
+    registrar
+)
 from sqlite3 import IntegrityError
 from sqlite3 import Error
 
 def conectar_db():
     return sqlite3.connect("DbUsuario.db")
-
-# ----------- AUTENTICACIÓN -----------
-def login(conn):
-    print("\n=== Inicio de sesión ===")
-    correo = input("Correo: ").strip()
-    contraseña = input("Contraseña: ").strip()
-
-    usuario = verificar_credenciales(conn, correo, contraseña)
-    if usuario:
-        print(f"\n¡Bienvenido {usuario[2]}!\n")  # usuario[2] = nombre
-        return usuario[0]  # usuario[0] = id_usuario
-    else:
-        print("\n Credenciales incorrectas.\n")
-        return None
-
-def verificar_credenciales(conn, correo, contraseña):
-    usuario = obtener_usuario_por_correo(conn, correo)
-    if usuario is not None:
-        if usuario[3] == contraseña:  # usuario[3] = contraseña
-            return usuario
-    return None
-
-
-def registrar(conn):
-    print("\n=== Registro de nuevo usuario ===")
-    correo = input("Correo: ").strip()
-    nombre = input("Nombre: ").strip()
-    contraseña = input("Contraseña: ").strip()
-
-    try:
-        id_usuario = crear_usuario(conn, correo, nombre, contraseña)
-        if id_usuario:
-            print(" Usuario registrado exitosamente. Puedes iniciar sesión ahora.")
-        else:
-            print(" No se pudo registrar el usuario.")
-    except IntegrityError:
-        print(" El correo ya está registrado. Intenta con otro.")
 
 # ----------- MENÚ DE TAREAS -----------
 def menu_tareas(conn, id_usuario):
@@ -81,7 +49,7 @@ def menu_tareas(conn, id_usuario):
             titulo = input("Título de la tarea: ").strip()
             descripcion = input("Descripción (opcional): ").strip()
             crear_tarea(conn, id_usuario, titulo, descripcion)
-            print(" Tarea creada.")
+            print("Tarea creada.")
 
         elif opcion == "3":
             id_tarea = input("ID de la tarea a editar: ").strip()
@@ -90,14 +58,14 @@ def menu_tareas(conn, id_usuario):
             actualizado = actualizar_tarea(conn, int(id_tarea),
                                             titulo if titulo else None,
                                             descripcion if descripcion else None)
-            print(" Tarea actualizada." if actualizado else " No se pudo actualizar.")
+            print("Tarea actualizada." if actualizado else " No se pudo actualizar.")
 
         elif opcion == "4":
             id_tarea = input("ID de la tarea a eliminar: ").strip()
             confirmado = input("¿Estás seguro? (s/n): ").strip().lower()
             if confirmado == "s":
                 eliminado = eliminar_tarea(conn, int(id_tarea))
-                print(" Tarea eliminada." if eliminado else " No se encontró la tarea.")
+                print("Tarea eliminada." if eliminado else "No se encontró la tarea.")
 
         elif opcion == "5":
             id_tarea = input("ID de la tarea a marcar como completada: ").strip()
