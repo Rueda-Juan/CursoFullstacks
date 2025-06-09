@@ -19,6 +19,9 @@ from .Servicios import (
 from sqlite3 import IntegrityError
 from sqlite3 import Error
 
+#comando para ejecutar main
+#   python -m proyectoFinalBD.main
+
 def conectar_db():
     return sqlite3.connect("DbUsuario.db")
 
@@ -55,22 +58,29 @@ def menu_tareas(conn, id_usuario):
             id_tarea = input("ID de la tarea a editar: ").strip()
             titulo = input("Nuevo título (enter para dejar igual): ").strip()
             descripcion = input("Nueva descripción (enter para dejar igual): ").strip()
-            actualizado = actualizar_tarea(conn, int(id_tarea),
-                                            titulo if titulo else None,
-                                            descripcion if descripcion else None)
-            print("Tarea actualizada." if actualizado else " No se pudo actualizar.")
+            if not id_tarea.isdigit():
+                print("ID inválido.")
+            else:
+                actualizado = actualizar_tarea(conn, int(id_tarea), titulo if titulo else None, descripcion if descripcion else None)
+                print("Tarea actualizada." if actualizado else " No se pudo actualizar.")
 
         elif opcion == "4":
             id_tarea = input("ID de la tarea a eliminar: ").strip()
-            confirmado = input("¿Estás seguro? (s/n): ").strip().lower()
-            if confirmado == "s":
-                eliminado = eliminar_tarea(conn, int(id_tarea))
-                print("Tarea eliminada." if eliminado else "No se encontró la tarea.")
+            if not id_tarea.isdigit():
+                print("ID inválido.")
+            else:
+                confirmado = input("¿Estás seguro? (s/n): ").strip().lower()
+                if confirmado == "s":
+                    eliminado = eliminar_tarea(conn, int(id_tarea))
+                    print("Tarea eliminada." if eliminado else "No se encontró la tarea.")
 
         elif opcion == "5":
             id_tarea = input("ID de la tarea a marcar como completada: ").strip()
-            completada = actualizar_tarea(conn, int(id_tarea), completada=1)
-            print(" Tarea marcada como completada." if completada else " No se pudo completar la tarea.")
+            if not id_tarea.isdigit():
+                print("ID inválido.")
+            else:
+                completada = actualizar_tarea(conn, int(id_tarea), completada=1)
+                print(" Tarea marcada como completada." if completada else " No se pudo completar la tarea.")
 
         elif opcion == "6":
             print("Cerrando sesión...")
