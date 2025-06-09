@@ -1,5 +1,11 @@
 import sqlite3
 import pytest
+import os
+import sys
+
+
+# Añadir la ruta del proyecto al sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from proyectoFinalBD.CRUD_Tarea import (
     crear_tarea,

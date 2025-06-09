@@ -3,8 +3,7 @@ from sqlite3 import Error
 #TAREA
 # CREATE
 def crear_tarea(conn, id_usuario, titulo, descripcion=None):
-    sql = '''INSERT INTO Tarea(id_usuario, titulo, descripcion)
-             VALUES(?,?,?)'''
+    sql = '''INSERT INTO Tarea(id_usuario, titulo, descripcion) VALUES (?,?,?)'''
     try:
         cursor = conn.cursor()
         cursor.execute(sql, (id_usuario, titulo, descripcion))
